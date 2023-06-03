@@ -97,6 +97,8 @@ def reduce_genres(gen):
 
 ## Exploratory Data Analysis and Data Visualization
 
+### 
+
 ### General trend of numeric features of songs over past 20 years (done in R code)
 
    Time-series boxplot for 16 different numeric features. (Purple lines reflect mean) 
@@ -109,7 +111,7 @@ def reduce_genres(gen):
    
    
    <p align="center">
-   <img src="Figure/modified-boxplot-matrix.png" width="110%"/>
+   <img src="images/modified-boxplot-matrix.png" width="110%"/>
    </p>
 
 
@@ -130,7 +132,7 @@ Some genres have very small percentage that would become popular, like `classica
    
  
    <p align="center">
-   <img src="Figure/modified-bar-plot.png" width="90%"/>
+   <img src="images/modified-bar-plot.png" width="90%"/>
    </p>
  
 
@@ -145,7 +147,7 @@ For `indie`, `house` and `mexican`, almost all come from recent five years. So t
 For `rock`, `latin`, `metal`, lots of older tracks still favored. So such music have been on decline?
 
    <p align="center">
-   <img src="Figure/year-type-popularity.png" width="80%"/>
+   <img src="images/year-type-popularity.png" width="80%"/>
    </p>
 
 
@@ -160,11 +162,11 @@ For `rock`, the whole market has dramatically shrinked; while `latin` and `metal
 
    
    <p align="center">
-   <img src="Figure/stream-pop.png" width="80%"/>
+   <img src="images/stream-pop.png" width="80%"/>
    </p>
 
    <p align="center">
-   <img src="Figure/stream-total.png" width="80%"/>
+   <img src="images/stream-total.png" width="80%"/>
    </p>
 
 
@@ -183,7 +185,7 @@ Comparison between **album** and **artist popularity**, we could see **track pop
 
  
    <p align="center">
-   <img src="Figure/modified-scatterplot-matrix.png" width="100%"/>
+   <img src="images/modified-scatterplot-matrix.png" width="100%"/>
    </p>
 
 
@@ -192,7 +194,7 @@ Scatterplot for relationship among album, artist and track popularity, in which 
 We could see using album and artist alone, could predict track popularity to some extent. 
  
    <p align="center">
-   <img src="Figure/album-artist-track.png" width="70%"/>
+   <img src="images/album-artist-track.png" width="70%"/>
    </p>
 
 
@@ -204,7 +206,7 @@ Before machine learning step, chord diagram generated for correlation between nu
 We could see some strong pair correlations, such as **loudness** and **energy**, **loudness** and **acousticness**, **speechiness** and **explicit**.
 
    <p align="center">
-   <img src="Figure/corr-map.png" width="80%"/>
+   <img src="images/corr-map.png" width="80%"/>
    </p>
 
 
@@ -243,7 +245,7 @@ importance = clf.feature_importances_
 ```
  
    <p align="center">
-   <img src="Figure/wordle.png" width="60%"/>
+   <img src="images/wordle.png" width="60%"/>
    </p>
  
 

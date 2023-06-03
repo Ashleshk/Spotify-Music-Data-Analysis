@@ -97,8 +97,6 @@ def reduce_genres(gen):
 
 ## Exploratory Data Analysis and Data Visualization
 
-### 
-
 ### General trend of numeric features of songs over past 20 years (done in R code)
 
    Time-series boxplot for 16 different numeric features. (Purple lines reflect mean) 
@@ -111,7 +109,7 @@ def reduce_genres(gen):
    
    
    <p align="center">
-   <img src="images/modified-boxplot-matrix.png" width="110%"/>
+   <img src="images/modified-boxplot-matrix.png" width="90%"/>
    </p>
 
 
@@ -169,6 +167,17 @@ For `rock`, the whole market has dramatically shrinked; while `latin` and `metal
    <img src="images/stream-total.png" width="80%"/>
    </p>
 
+### Change in Duration of songs wrt Years
+
+   <p align="center">
+   <img src="images/Change in Duration of songs wrt Years.png" width="80%"/>
+   </p>
+
+### Duration of songs in different Genres
+
+   <p align="center">
+   <img src="images/Duration of songs in different Genres.png" width="80%"/>
+   </p>
 
 
 ### Popularity Analysis by numeric features
@@ -252,24 +261,27 @@ importance = clf.feature_importances_
 Since album popularity is quite similar and highly correlated to track popularity, we removed this feature and trained data again, our model still could achieve a high accuracy around 0.85.
 
 ## Summary and Discussion
-Here's the insight we've learned about music trend based on big data analysis:
+
+We've analyzed Spotify API data, and have discovered some very interesting trends for today's music market, and also provide a high-quality model for track popularity prediction. Hopefully this could provide some insight into today and future's music market and industr
+
+**Insights:**
 
 1.**Recent music is still largely favored**, indicating customers' music "psychology" leaning towards trying novel tracks. 
 
-2.Some physical features of music with high popularity have slightly changed, including **energy/loudness** slightly increased, and **valence** slightly decreased. It'll be interesting to see if such small trend will continue.
+2. Some physical features of music with high popularity have slightly changed, including **energy/loudness** slightly increased, and **valence** slightly decreased. It'll be interesting to see if such small trend will continue.
 
 Also, track number has been lower, indicating **smaller album** in music industry nowadays.
 
-3.`Pop music` undoubtedly dominates the music market, in both production quantity and popularity quantity; while some other genres like `soul` and `classical` have almost zero percentage of being top 20% popular, most probably because they are minority music favored by a small population.
+3. `Pop music` undoubtedly dominates the music market, in both production quantity and popularity quantity; while some other genres like `soul` and `classical` have almost zero percentage of being top 20% popular, most probably because they are minority music favored by a small population.
 
-4.Important change: `indie` and `house` are brandnew genres and novel trend! While `rock`, which used to be prosperous, has now shrinked dramatically. 
+4. Important change: `indie` and `house` are brandnew genres and novel trend! While `rock`, which used to be prosperous, has now shrinked dramatically. 
 
-5.There's basically NO correlation between track popularity and numeric physical features; yet, there's strong correlation among track, album and artist popularity, which is not suprising; and there's also slight correlation between track popularity and track number, which is also not surprising, as most popular songs are usually the first in the album.
+5. There's basically NO correlation between track popularity and numeric physical features; yet, there's strong correlation among track, album and artist popularity, which is not suprising; and there's also slight correlation between track popularity and track number, which is also not surprising, as most popular songs are usually the first in the album.
 
-6.We established a machine learning model, which could successfully predict track popularity. Ensemble methods are extremely good for analyzing multi-feature data with non-linear relationship, plus XGBoost has recently dominated data science field with extreme superiority, so we choose XGBClassifier to train our data, and achieved very excellent accuracy score for both cross-validated and test data. The best predictive feature is album popularity.
+## **Model Assessment**
+1. We established a machine learning model, which could successfully predict track popularity. Ensemble methods are extremely good for analyzing multi-feature data with non-linear relationship, plus XGBoost has recently dominated data science field with extreme superiority, so we choose XGBClassifier to train our data, and achieved very excellent accuracy score for both cross-validated and test data. The best predictive feature is album popularity.
 
-7.We are using API data, which could better reflect the most recent trend; and we vectorized text feature into numeric to strengthen our models. 
+2. We are using API data, which could better reflect the most recent trend; and we vectorized text feature into numeric to strengthen our models. 
 
-8.Unfortunately, Spotify API does NOT provide location information for users; otherwise it'll be good idea to analyze music taste difference for different states as well as across the globe.
+3. Unfortunately, Spotify API does NOT provide location information for users; otherwise it'll be good idea to analyze music taste difference for different states as well as across the globe.
 
-In general, we've analyzed Spotify API data, and have discovered some very interesting trends for today's music market, and also provide a high-quality model for track popularity prediction. Hopefully this could provide some insight into today and future's music market and industry.

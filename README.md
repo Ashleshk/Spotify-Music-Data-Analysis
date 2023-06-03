@@ -4,7 +4,7 @@
 
 With the rise of Spotify, iTune, Youtube, etc, streaming services have contributed majority of music industry revenues. And understanding what makes streaming music popular could hugely impact decision-making for music business.
 
-In this project, we conducted data mining for 200000 tracks extracted by Spotify API, in order to analyze the trend of music industry development, and produce a predictive model for track popularity.
+In this project, I conducted data mining for 200000 tracks extracted by Spotify API, in order to analyze the trend of music industry development, and produce a predictive model for track popularity.
 
 
 <span style="color:red"></span>
@@ -28,7 +28,7 @@ In this project, we conducted data mining for 200000 tracks extracted by Spotify
 
    [Spotify API link](https://developer.spotify.com/web-api/track-endpoints/)
 
-**We randomly extracted data for 10000 tracks per year for the past 20 years.**
+**I randomly extracted data for 10000 tracks per year for the past 20 years.**
 ```python
 url = 'https://api.spotify.com/v1/search?q=year:'+ keywords +'&type=' + search_type +'&offset='+ off +'&limit=' + lim
 requests.get(url).json()
@@ -279,9 +279,9 @@ Also, track number has been lower, indicating **smaller album** in music industr
 5. There's basically NO correlation between track popularity and numeric physical features; yet, there's strong correlation among track, album and artist popularity, which is not suprising; and there's also slight correlation between track popularity and track number, which is also not surprising, as most popular songs are usually the first in the album.
 
 ## **Model Assessment**
-1. We established a machine learning model, which could successfully predict track popularity. Ensemble methods are extremely good for analyzing multi-feature data with non-linear relationship, plus XGBoost has recently dominated data science field with extreme superiority, so we choose XGBClassifier to train our data, and achieved very excellent accuracy score for both cross-validated and test data. The best predictive feature is album popularity.
+1. I implemented a machine learning model, which could successfully predict track popularity. Ensemble methods are extremely good for analyzing multi-feature data with non-linear relationship, plus XGBoost has recently dominated data science field with extreme superiority, so we choose XGBClassifier to train our data, and achieved very excellent accuracy score for both cross-validated and test data. The best predictive feature is album popularity.
 
-2. We are using API data, which could better reflect the most recent trend; and we vectorized text feature into numeric to strengthen our models. 
+2. here I am using API data, which could better reflect the most recent trend; and we vectorized text feature into numeric to strengthen our models. 
 
 3. Unfortunately, Spotify API does NOT provide location information for users; otherwise it'll be good idea to analyze music taste difference for different states as well as across the globe.
 
